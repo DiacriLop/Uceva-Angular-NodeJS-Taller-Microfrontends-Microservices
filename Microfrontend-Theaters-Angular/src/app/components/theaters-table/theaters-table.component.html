@@ -1,0 +1,27 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Ciudad</th>
+			<th scope="col">Capacidad</th>
+            <th scope="col">Dirección</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (theater of theaters; track theater) {
+			<tr>
+				<th scope="row">{{ theater.id }}</th>
+				<td>{{ theater.name }}</td>
+                <td>
+					<dsb-badge-atom
+						[text]="theater.city"
+						[type]="categoryMap[theater.city]" >
+                    </dsb-badge-atom>
+				</td>
+				<td>{{ theater.capacity }}</td>
+				<td>{{ theater.direction }}</td>
+			</tr>
+		}
+	</tbody>
+</table>
