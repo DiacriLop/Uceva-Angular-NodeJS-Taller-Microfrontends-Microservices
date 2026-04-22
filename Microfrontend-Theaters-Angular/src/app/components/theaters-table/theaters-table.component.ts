@@ -49,7 +49,7 @@ export class TheatersTableComponent {
    * Esto permite que en la tabla cada sala tenga un badge visual que indique su ciudad
    * de forma clara para el usuario.
    */
-  categoryMap: Record<City, BadgeType> = {
+  theaterMap: Record<City, BadgeType> = {
     'Cali' : 'danger',
     'Tulua': 'warning',
     'Palmira': 'primary',
