@@ -15,6 +15,7 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
  *
  * @see {@link UsersPage}
  * @see {@link ProductsPage}
+ *  @see {@link TheatersPage}
  */
 export const routes: Routes = [
 
@@ -49,6 +50,22 @@ export const routes: Routes = [
                 remoteEntry: 'http://localhost:4202/remoteEntry.js',
                 exposedModule: './ProductsPage',
         }).then(m => m.ProductsPage),
+    },
+     /**
+   * Ruta de salas de cine .
+   *
+   * @remarks
+   * Renderiza el componente `ProdsPage`, encargado
+   * de mostrar y gestionar el listado de productos.
+   */
+    {
+        path: 'theaters',
+        loadComponent: () =>
+            loadRemoteModule({
+                type: 'module',
+                remoteEntry: 'http://localhost:4203/remoteEntry.js',
+                exposedModule: './TheatersPage',
+        }).then(m => m.TheatersPage),
     },
 
   /**
