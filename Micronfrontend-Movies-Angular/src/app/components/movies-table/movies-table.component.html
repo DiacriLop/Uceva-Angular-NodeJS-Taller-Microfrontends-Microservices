@@ -1,0 +1,27 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+      <th scope="col">id</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Director</th>
+      <th scope="col">Fecha de salida</th>
+      <th scope="col">Genero</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (movie of movies; track movie) {
+			<tr>
+				<th scope="row">{{ movie.id }}</th>
+				<td>{{ movie.title }}</td>
+				<td>{{ movie.director }}</td>
+				<td>{{ movie.releaseYear }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="movie.genre"
+						[type]="genreMap[movie.genre]" >
+					</dsb-badge-atom>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
