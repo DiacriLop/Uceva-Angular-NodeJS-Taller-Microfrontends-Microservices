@@ -34,7 +34,7 @@ export const routes: Routes = [
                 remoteEntry: 'http://localhost:4201/remoteEntry.js',
                 exposedModule: './UsersPage',
         }).then(m => m.UsersPage),
-    },    
+    },
   /**
    * Ruta de productos.
    *
@@ -56,7 +56,7 @@ export const routes: Routes = [
    *
    * @remarks
    * Renderiza el componente `ProdsPage`, encargado
-   * de mostrar y gestionar el listado de productos.
+   * de mostrar y gestionar el listado de salas de cine.
    */
     {
         path: 'theaters',
@@ -66,6 +66,22 @@ export const routes: Routes = [
                 remoteEntry: 'http://localhost:4203/remoteEntry.js',
                 exposedModule: './TheatersPage',
         }).then(m => m.TheatersPage),
+    },
+         /**
+   * Ruta de películas .
+   *
+   * @remarks
+   * Renderiza el componente `ProdsPage`, encargado
+   * de mostrar y gestionar el listado de películas.
+   */
+    {
+        path: 'movies',
+        loadComponent: () =>
+            loadRemoteModule({
+                type: 'module',
+                remoteEntry: 'http://localhost:4204/remoteEntry.js',
+                exposedModule: './MoviesPage',
+        }).then(m => m.MoviesPage),
     },
 
   /**
