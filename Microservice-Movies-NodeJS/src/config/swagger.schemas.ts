@@ -2,41 +2,56 @@
  * @openapi
  * components:
  *   schemas:
- *     User:
+ *     Movie:
  *       type: object
- *       description: Representa un usuario del sistema
+ *       description: Representa una película generada por el microservicio Movies.
  *       required:
  *         - id
- *         - name
- *         - lastName
- *         - age
- *         - email
- *         - engineering
+ *         - title
+ *         - director
+ *         - releaseYear
+ *         - genre
  *       properties:
  *         id:
- *           type: number
+ *           type: integer
+ *           minimum: 1
+ *           description: Identificador único de la película.
  *           example: 1
- *         name:
+ *         title:
  *           type: string
- *           example: Carlos
- *         lastName:
+ *           description: Título de la película.
+ *           example: El Padrino
+ *         director:
  *           type: string
- *           example: Ramírez
- *         age:
- *           type: number
- *           example: 22
- *         email:
+ *           description: Nombre del director de la película.
+ *           example: Francis Ford Coppola
+ *         releaseYear:
+ *           type: integer
+ *           description: Año de estreno de la película.
+ *           example: 1972
+ *         genre:
  *           type: string
- *           format: email
- *           example: carlos.ramirez@example.com
- *         engineering:
- *           type: string
+ *           description: Género cinematográfico de la película.
  *           enum:
- *             - Sistemas
- *             - Electronica
- *             - Biomedica
- *             - Industrial
- *             - Ambiental
- *           example: Sistemas
+ *             - Acción
+ *             - Comedia
+ *             - Drama
+ *             - Ciencia Ficción
+ *             - Terror
+ *           example: Drama
+ *
+ *     MoviesList:
+ *       type: array
+ *       description: Colección de películas retornada por la API.
+ *       items:
+ *         $ref: '#/components/schemas/Movie'
+ *
+ *     ErrorResponse:
+ *       type: object
+ *       description: Estructura estándar para respuestas de error.
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: Parámetro countMovies inválido.
  */
 export {};
