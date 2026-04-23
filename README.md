@@ -1,9 +1,12 @@
 # 🧪 Taller: Microfrontends y Microservices en Angular y NodeJS
-
 - Este proyecto fue generado utilizando [Angular CLI](https://github.com/angular/angular-cli) 20.3.14.
 
 - El objetivo del taller es practicar la creación de 2 proyectos para representar la arquitectura
 cliente servidor, con las Tecnologias de Angular y NodeJS.
+
+## 👩‍💻 Autores
+- Jorge Eduardo Cobo - 230222019
+- Diana Cristina Lopez - 230222003
 
 ## 📋 Requisitos Previos
 
@@ -22,19 +25,25 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - Ubícate en la raíz del proyecto de Client-Host-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microfrontend-Users-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microfrontend-Products-Angular y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microfrontend-Theaters-Angular y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microfrontend-Movies-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microservice-Users-NodeJS y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microservice-Products-NodeJS y ejecuta el comando: ```npm i```
--  Ubícate en la raíz del proyecto de Microservice-Theaters-NodeJS y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microservice-Theaters-NodeJS y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microservice-Movies-NodeJS y ejecuta el comando: ```npm i```
 
 
 ### 2️⃣ Ejecutar los Proyectos
 
 - Ubícate en la raíz del proyecto de Microservice-Users-NodeJS y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microservice-Products-NodeJS y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microservice-Theaters-NodeJS y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microservice-Movies-NodeJS y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microfrontend-Users-Angular y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microfrontend-Products-Angular y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microfrontend-Theaters-Angular y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microfrontend-Movies-Angular y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Client-Host-Angular y ejecuta el comando: ```npm run start```
--  Ubícate en la raíz del proyecto de Microservice-Theaters-NodeJS y ejecuta el comando: ```npm run start```
 
 
 ### 3️⃣ Verificar Funcionamiento de Proyectos
@@ -54,6 +63,11 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - Swagger API Docs: ```http://localhost:3003/api/docs```
 - API Products: ```http://localhost:3003/api/theaters/{countTheaters}```
 
+#### Microservice-Movies-NodeJS
+- Corriendo en: ```http://localhost:3004```
+- Swagger API Docs: ```http://localhost:3004/api/docs```
+- API Products: ```http://localhost:3004/api/movies/{countMovies}```
+  
 #### Microfrontend-Users-Angular
 - Corriendo en: ```http://localhost:4201```
 - RemoteEntry: ```http://localhost:4201/remoteEntry.js```
@@ -65,6 +79,10 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 #### Microfrontend-Theaters-Angular
 - Corriendo en: ```http://localhost:4203```
 - RemoteEntry: ```http://localhost:4203/remoteEntry.js```
+
+#### Microfrontend-Movies-Angular
+- Corriendo en: ```http://localhost:4204```
+- RemoteEntry: ```http://localhost:4204/remoteEntry.js```
 
 #### Client-Host-Angular
 - Corriendo en: ```http://localhost:4200```
