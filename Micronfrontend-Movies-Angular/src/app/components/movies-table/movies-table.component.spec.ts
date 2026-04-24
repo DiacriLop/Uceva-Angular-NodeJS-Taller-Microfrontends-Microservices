@@ -46,9 +46,10 @@ describe('MoviesTableComponent', () => {
       const movie = component.movies[index];
 
       expect(columns[0].nativeElement.textContent.trim()).toBe(String(movie.id));
-      expect(columns[1].nativeElement.textContent.trim()).toBe(movie.director);
-      expect(columns[2].nativeElement.textContent.trim()).toBe(movie.releaseYear.toString());
-      expect(columns[3].nativeElement.textContent.trim()).toBe(movie.genre);
+      expect(columns[1].nativeElement.textContent.trim()).toBe(movie.title);
+      expect(columns[2].nativeElement.textContent.trim()).toBe(movie.director);
+      expect(columns[3].nativeElement.textContent.trim()).toBe(movie.releaseYear.toString());
+      expect(columns[4].nativeElement.textContent.trim()).toContain(movie.genre);
     });
   });
 

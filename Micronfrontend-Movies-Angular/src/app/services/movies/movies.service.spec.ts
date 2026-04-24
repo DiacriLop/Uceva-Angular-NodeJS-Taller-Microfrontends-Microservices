@@ -3,6 +3,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { TestBed } from '@angular/core/testing';
 import { MOVIES_MOCK } from '../../mocks/movies.mocks';
 import { MoviesService } from './movies.service';
+import { Movie } from '../../interfaces/movies.interface';
 
 describe('MoviesService', () => {
   let service: MoviesService;
@@ -43,7 +44,7 @@ describe('MoviesService', () => {
         expect(peliculas.length).toBe(mockMovies.length);
       });
 
-      const req = httpMock.expectOne(`api/movies/${countMovies}`);
+      const req = httpMock.expectOne(`http://localhost:3004/api/movies/${countMovies}`);
       expect(req.request.method).toBe('GET');
 
       req.flush(mockMovies);
@@ -61,7 +62,7 @@ describe('MoviesService', () => {
         },
       });
 
-      const req = httpMock.expectOne(`api/movies/${countMovies}`);
+      const req = httpMock.expectOne(`http://localhost:3004/api/movies/${countMovies}`);
 
       req.flush(
         { message: 'Error interno del servidor' },
@@ -70,5 +71,4 @@ describe('MoviesService', () => {
     });
 
   });
-
 });
